@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/layout1.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/942474988a.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="#">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/942474988a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="#">
     <style>
-
-</style>
+      *{
+        font-family: monaco,Consolas,Lucida Console,monospace;
+      }      
+      
+    </style>
+    {%block title%}{%endblock%}
 </head>
-<body  style="background-color: deepskyblue;">
+<body  style="background:url(/static/images/bg1.jpg) center/cover; background-repeat:no-repeat; background-attachment:fixed;">
     <nav class="navbar navbar-expand-md bg-dark" style="background-color: #d6249f; border-radius:8px;margin-bottom:10px;">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" style="color: #d6249f;" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -25,29 +29,31 @@
             <ul class="navbar-nav" style="align-items: center;">
 
                 <li class="nav-item" style="text-align: center;">
-                  <a class="nav-link" href="#" style="text-align: center;color:#fdf497;">HOME</a>
+                  <a class="nav-link" href="home" style="text-align: center;color:#fdf497; font-size:25px;">HOME</a>
                 </li>
 
                 <li class="nav-item" style="text-align: center;">
-                  <a class="nav-link" href="#" style="text-align: center;color:#fdf497;">ABOUT</a>
+                  <a class="nav-link" href="about" style="text-align: center;color:#fdf497; font-size:25px;">ABOUT</a>
                 </li>
 
                 <li class="nav-item" style="text-align: center;">
-                  <a class="nav-link" href="#" style="text-align: center;color:#fdf497;">CONTACT</a>
+                  <a class="nav-link" href="contact" style="text-align: center;color:#fdf497; font-size:25px;">CONTACT</a>
                 </li>
 
                 <li class="nav-item" style="text-align: center;">
-                    <a class="nav-link" href="#" style="text-align: center;color:#fdf497;">SIGN-IN</a>
+                    <a class="nav-link" href="signin" style="text-align: center;color:#fdf497; font-size:25px;">SIGN-IN</a>
                 </li>
 
                 <li class="nav-item" style="text-align: center;">
-                    <a class="nav-link" href="#" style="text-align: center;color:#fdf497;">SIGN-UP</a>
+                    <a class="nav-link" href="signup" style="text-align: center;color:#fdf497; font-size:25px;">SIGN-UP</a>
                 </li>
 
               </ul>
         </div>  
     </nav>
-    <div class="container-ls"></div>
+    {%block content%}{%endblock%}
+
+
     <div class="linkers">
         <div class="footer">
         <a class="facebook" href="https://www.facebook.com/Mukund.rocker" target="_blank" style="margin: 10px;"> <span></span> <span></span> <span></span> <span></span> <i class="fab fa-facebook" aria-hidden="true"></i></a> 
