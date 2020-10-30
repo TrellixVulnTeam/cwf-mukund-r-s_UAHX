@@ -1,3 +1,4 @@
+import os
 from flask import Flask,render_template,request,redirect,url_for
 app=Flask(__name__)
 
@@ -24,5 +25,6 @@ def signup():
     return render_template('signup.html')
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'), port=os.environ.get('PORT'),
+            debug=bool(os.environ.get('DEVELOPMENT')))
